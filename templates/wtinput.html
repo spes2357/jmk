@@ -1,0 +1,156 @@
+{% extends "layout.html" %}
+{% block content %}
+
+	<div class="content-section" style="background: #90a390;">
+		<form method="POST" action ="">
+			{{ form.hidden_tag() }}
+			<fieldset class="form-group">
+				<legend class = "border-bottom mb-4">Record Your Workout</legend>
+				<ul class=flashes></ul>
+				<div class="bootstrap-iso">
+					<div class="container-fluid"  style="background: #90a390; border: 1px solid #90a390;">
+						<div class="row">
+							   <!-- <div class="col-md-10 col-sm-6 col-sm-12"> -->
+						    <div class="col-md-6 mb-1">
+
+								<!-- Form code begins -->
+								<div class="content-section"  style="background: #90a390; border: 1px solid #90a390;">
+									
+									<div class="form-group"> 
+									
+										{{ render_field(form.date, class="form-control", placeholder="MM/DD/YYY", type="text" ) }}
+				
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 mb-1">
+
+								<!-- Form code begins -->
+								<div class="content-section"  style="background: #90a390; border: 1px solid #90a390;">
+									<div class = "form-group">
+										{{ form.sleephours.label(class="form-control-label") }}
+										{{ form.sleephours(class="form-control form-control-sm") }}	
+									</div>
+								</div>
+							</div>
+						</div>    
+					</div>
+				</div>
+				<div class="row">
+
+					<div class="col-md-6 mb-3">
+						
+							<div class="content-section"  style="background: #90a390; border: 1px solid #90a390;">
+								<legend class = "border-bottom mb-3">Condition</legend>
+								<div class = "form-group">
+									{{ form.illness.label(class="form form-control-label ") }}
+									{{ form.illness(class="form-control form-control-sm ") }}					
+								</div>
+							
+							
+								<div class = "form-group">
+									{{ form.fatigue.label(class="form-control-label") }}
+									{{ form.fatigue(class="form-control form-control-sm") }}	
+								</div>
+							</div>
+							<div class="content-section"  style="background: #90a390; border: 1px solid #90a390;">
+							<legend class = "border-bottom mb-3">Workout</legend>
+								<div class = "form-group" >
+									{{ form.workoutname.label(class="form-control-label") }}
+									{{ form.workoutname(class="form-control form-control-sm") }}
+									<p id = "datalist"></p>
+								</div>
+
+								<div class = "form-group">
+									{{ form.weight.label(class="form-control-label") }}
+									{{ form.weight(class="form-control form-control-sm") }}	
+							
+								</div>
+								<div class = "form-group">
+									{{ form.set.label(class="form-control-label") }}
+									{{ form.set(class="form-control form-control-sm") }}	
+								</div>
+								<div class = "form-group">
+									{{ form.rep.label(class="form-control-label") }}
+									{{ form.rep(class="form-control form-control-sm") }}	
+								</div>
+								<div class = "form-group">
+									{{ form.equipment.label(class="form-control-label") }}
+									{{ form.equipment(class="form-control form-control-sm") }}	
+								</div>
+								<div class = "form-group">
+									{{ form.workouthours.label(class="form-control-label") }}
+									{{ form.workouthours(class="form-control form-control-sm") }}
+								</div>
+								<div class = "form-group">
+									{{ form.muscleMajor.label(class="form-control-label") }}
+									{{ form.muscleMajor(class="form-control form-control-sm") }}
+									<p id = "datalist2"></p>
+								</div>
+								<div class = "form-group">
+									{{ form.muscleMinor.label(class="form-control-label") }}
+									{{ form.muscleMinor(class="form-control form-control-sm") }}
+								</div>
+								<div class = "form-group">
+									{{form.add1(class = "btn btn-success")}}
+								</div>
+						</div>
+							
+							
+					</div>
+					<div class="col-md-6 mb-3">
+						
+						
+						<div class="content-section"  style="background: #90a390; border: 1px solid #90a390;">
+							<legend class = "border-bottom mb-3">Nutrition</legend>
+							
+							<div class = "form-group">
+								{{ form.amount.label(class="form-control-label") }}
+								{{ form.amount(class="form-control form-control-sm") }}	
+							</div>
+							<div class = "form-group">
+								{{ form.fooddrinkname.label(class="form-control-label") }}
+								{{ form.fooddrinkname(class="form-control form-control-sm") }}	
+							</div>
+							<div class = "form-group">
+								{{ form.carb.label(class="form-control-label") }}
+								{{ form.carb(class="form-control form-control-sm") }}	
+							</div>
+							<div class = "form-group">
+								{{ form.protein.label(class="form-control-label") }}
+								{{ form.protein(class="form-control form-control-sm") }}	
+							</div>
+							<div class = "form-group">
+								{{ form.fat.label(class="form-control-label") }}
+								{{ form.fat(class="form-control form-control-sm") }}	
+							</div>	
+							<div class = "form-group">
+								{{form.add2(class = "btn btn-success")}}
+							</div>
+						</div>
+						<div class = "form-group">
+							{{ form.submit(class = "btn btn-outline-info") }}
+						</div>
+<!--						<div>-->
+<!--							<input type="text" id = "livebox">-->
+<!--							<p id = "datalist"></p>-->
+<!--						</div>-->
+					</div>	
+				</div>
+				
+				
+				
+			</fieldset>
+			
+		
+		</form>
+	</div>
+
+
+
+<!--	<script type = "text/javascript">-->
+<!--		function sayHello() {-->
+<!--  		alert("Hello World")-->
+<!--		}-->
+<!--	</script>-->
+{% endblock content %}
