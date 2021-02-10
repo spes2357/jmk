@@ -1,1 +1,1 @@
-# JMK Work out Tracker
+# JMK Workout Tracker
